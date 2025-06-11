@@ -187,7 +187,7 @@ body {
 }
 @media (max-width: 450px){
     .Subscribe ::placeholder{
-        font-size: 10px;
+        font-size: 11px;
     }
     .Subscribe form p{
         font-size: 10px;
@@ -295,18 +295,42 @@ footer{
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
 }
-.chat-bot-button img{
+
+.chat-bot-button img {
     width: 50px;
     height: 50px;
+    transition: width 0.2s, height 0.2s;
+}
+
+@media (max-width: 1200px) {
+    .chat-bot-button img {
+        width: 45px;
+        height: 45px;
+    }
+}
+@media (max-width: 991px) {
+    .chat-bot-button img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .chat-bot-button img {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
     }
+
     70% {
         box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
     }
@@ -340,6 +364,7 @@ footer{
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -408,6 +433,7 @@ footer{
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -511,7 +537,6 @@ footer{
     font-size: 16px;
 }
 
-/* تنسيقات للشاشات الصغيرة */
 @media (max-width: 576px) {
     .chat-bot-window {
         width: 90%;
@@ -520,7 +545,7 @@ footer{
         bottom: 80px;
         height: 400px;
     }
-    
+
     .chat-bot-button {
         bottom: 20px;
         left: 20px;
@@ -528,25 +553,23 @@ footer{
         height: 50px;
         font-size: 20px;
     }
-    
+
     .chat-input {
         padding: 10px;
         font-size: 14px;
     }
-    
+
     .send-btn {
         width: 36px;
         height: 36px;
     }
-    
+
     .message {
         max-width: 90%;
         padding: 8px 12px;
         font-size: 14px;
     }
 }
-
-/* تأثيرات إضافية للتفاعل */
 .typing-indicator {
     display: flex;
     align-items: center;
@@ -586,7 +609,6 @@ footer{
     }
 }
 
-/* تحسينات إضافية للتوافق مع الهواتف */
 @media (max-height: 600px) {
     .chat-bot-window {
         height: 350px;
@@ -599,13 +621,12 @@ footer{
     }
 }
 
-/* تحسينات للتوافق مع الشاشات الكبيرة */
 @media (min-width: 1200px) {
     .chat-bot-window {
         width: 400px;
         height: 500px;
     }
-    
+
     .chat-bot-button {
         width: 70px;
         height: 70px;

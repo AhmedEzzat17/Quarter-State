@@ -81,7 +81,6 @@ body {
 .property-top-section {
     display: flex;
     flex-direction: row;
-    /* border-bottom: 1px solid var(--border-color); */
 }
 
 .property-image-section {
@@ -150,7 +149,6 @@ body {
 }
 
 .safety-notice {
-    /* border-top: 1px solid var(--border-color); */
     padding-top: 15px;
     margin-top: 15px;
 }
@@ -211,7 +209,6 @@ body {
     display: flex;
     align-items: center;
     color: #666;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .location i {
@@ -442,7 +439,7 @@ body {
 
 @media (max-width: 450px) {
     .Subscribe ::placeholder {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .Subscribe form p {
@@ -557,7 +554,7 @@ footer {
     font-size: 24px;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+    z-index: 999;
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
 }
@@ -565,6 +562,27 @@ footer {
 .chat-bot-button img {
     width: 50px;
     height: 50px;
+    transition: width 0.2s, height 0.2s;
+}
+
+@media (max-width: 1200px) {
+    .chat-bot-button img {
+        width: 45px;
+        height: 45px;
+    }
+}
+@media (max-width: 991px) {
+    .chat-bot-button img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .chat-bot-button img {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @keyframes pulse {
@@ -586,6 +604,7 @@ footer {
     background-color: var(--main-color-dark);
 }
 
+/* تنسيقات نافذة الشات بوت */
 .chat-bot-window {
     position: fixed;
     bottom: 20px;
@@ -615,6 +634,7 @@ footer {
     }
 }
 
+/* رأس نافذة الشات */
 .chat-header {
     background-color: var(--main-color-dark);
     color: white;
@@ -684,7 +704,7 @@ footer {
 }
 
 .bot-message {
-    background-color: #fff;
+    background-color: var(--light-color);
     color: #333;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
@@ -701,7 +721,7 @@ footer {
     left: -10px;
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: var(--light-color);
     border-radius: 0 0 20px 0;
     z-index: -1;
 }
@@ -730,6 +750,7 @@ footer {
     z-index: -1;
 }
 
+/* تذييل نافذة الشات */
 .chat-footer {
     padding: 10px 15px;
     display: flex;
@@ -812,12 +833,11 @@ footer {
         font-size: 14px;
     }
 }
-
 .typing-indicator {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    background-color: #fff;
+    background-color: var(--light-color);
     padding: 8px 15px;
     border-radius: 18px;
     width: fit-content;
@@ -856,23 +876,11 @@ footer {
     .chat-bot-window {
         height: 350px;
     }
-
-    .chat-bot-button img {
-        width: 30px;
-        height: 30px;
-    }
 }
 
 @media (max-height: 500px) {
     .chat-bot-window {
         height: 300px;
-    }
-}
-
-@media (max-height: 991px) {
-    .chat-bot-button img {
-        width: 35px;
-        height: 35px;
     }
 }
 
